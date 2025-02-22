@@ -17,6 +17,7 @@ export class Scraper {
     });
 
     private async pullLaw(id: string, name: string): Promise<Document<Metadata>[]> {
+        console.log(`Pulling law: ${name} (${id})`);
         const text = await this.riigiteataja.getLaw(id);
         const chunks = await this.textSplitter.splitText(text);
         return chunks.map(chunk => ({ pageContent: chunk, metadata: { id, name } }));

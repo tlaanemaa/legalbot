@@ -1,4 +1,4 @@
-GET http://localhost:3000/api/scrape?query=Üürnik jäi võlgu
+GET http://localhost:3000/api/scrape?query=Üürileping
 
-###
+### Scrape and store laws
 POST http://localhost:3000/api/scrape
